@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SECTOR RUSH — neon arcade racer · Coming Soon</title>
+<meta name="description" content="Sector Rush — an OutRun-style neon arcade racer. One continuous drive, sunset to dawn. Coming soon — wishlist on Steam.">
+<!-- Open Graph / social sharing -->
+<meta property="og:title" content="SECTOR RUSH — neon arcade racer">
+<meta property="og:description" content="An OutRun-style neon arcade racer. One continuous drive, sunset to dawn. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/zone4.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+  <img class="logo" src="img/logo.png" alt="SECTOR RUSH">
+  <p class="status"><span class="dot"></span>Coming Soon</p>
+
+  <!-- TRAILER — front and centre -->
+  <div class="trailer">
+    <video controls autoplay muted loop playsinline preload="metadata" poster="img/zone4.png">
+      <source src="video/trailer.mp4" type="video/mp4">
+      Your browser doesn’t support embedded video.
+    </video>
+  </div>
+
+  <p class="tag">An OutRun-style neon arcade racer — one continuous drive, sunset to dawn.</p>
+
+  <!-- WISHLIST -->
+  <div class="cta">
+    <!-- Replace data-url with your Steam store page once it exists, e.g.
+         https://store.steampowered.com/app/XXXXXXX/Sector_Rush/ -->
+    <a id="steam" class="btn btn--steam" href="STEAM_APP_URL" data-url="STEAM_APP_URL" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" class="btn__icon">
+        <path fill="currentColor" d="M12 2a10 10 0 0 0-9.96 9.2l5.34 2.2a2.83 2.83 0 0 1 1.6-.5h.14l2.37-3.44v-.05a3.78 3.78 0 1 1 3.78 3.78h-.09l-3.38 2.41v.12a2.84 2.84 0 0 1-5.62.55l-3.82-1.58A10 10 0 1 0 12 2Zm-3.2 15.18.97.4a2.13 2.13 0 1 0 .82-2.02l1.27.53a1.57 1.57 0 1 1-3.06 1.07Zm9.2-7.4a2.52 2.52 0 1 0-2.52-2.52A2.52 2.52 0 0 0 18 9.78Zm0-4.41a1.9 1.9 0 1 1-1.9 1.89A1.9 1.9 0 0 1 18 5.37Z"/>
+      </svg>
+      Wishlist on Steam
+    </a>
+    <p class="cta__msg" id="steamMsg"></p>
+  </div>
+
+  <!-- MAILING LIST -->
+  <form class="signup" id="signup" data-endpoint="MAILING_LIST_ENDPOINT">
+    <label class="signup__label" for="email">Get an email when it launches</label>
+    <div class="signup__row">
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
+             placeholder="you@example.com" required>
+      <button type="submit">Notify Me</button>
+    </div>
+    <p class="signup__msg" id="signupMsg" role="status" aria-live="polite"></p>
+  </form>
+</main>
+
+<footer class="footer">
+  <p class="footer__logo">SECTOR<span>RUSH</span></p>
+  <p>An OutRun-style neon arcade racer · Built in Godot</p>
+  <p class="footer__small">Trailer footage is work-in-progress. © <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
