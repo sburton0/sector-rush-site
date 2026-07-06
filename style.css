@@ -81,6 +81,11 @@ a{color:inherit;text-decoration:none}
   color:#04121a;box-shadow:0 0 28px rgba(63,242,255,.40);
 }
 .btn--steam:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(63,242,255,.6)}
+.btn--discord{
+  background:linear-gradient(95deg,#5865f2,#7a86ff);
+  color:#fff;box-shadow:0 0 28px rgba(88,101,242,.40);
+}
+.btn--discord:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(88,101,242,.6)}
 .cta__msg{min-height:1.2em;color:var(--muted);font-size:15px;letter-spacing:.5px}
 
 /* ---------- mailing list ---------- */
