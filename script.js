@@ -48,10 +48,13 @@ document.getElementById("year").textContent = new Date().getFullYear();
       return;
     }
     setMsg("Sending…", true);
+    // Include the honeypot field so Formspree can silently drop bot submissions
+    // that fill it in (real users never see it).
+    var gotcha = form._gotcha ? form._gotcha.value : "";
     fetch(endpoint, {
       method: "POST",
       headers: { Accept: "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email })
+      body: JSON.stringify({ email: email, _gotcha: gotcha })
     })
       .then(function (res) {
         if (res.ok) {

@@ -52,13 +52,17 @@
   </div>
 
   <!-- MAILING LIST -->
-  <form class="signup" id="signup" data-endpoint="MAILING_LIST_ENDPOINT">
+  <form class="signup" id="signup" data-endpoint="https://formspree.io/f/mrewdapg">
     <label class="signup__label" for="email">Get an email when it launches</label>
     <div class="signup__row">
       <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
              placeholder="you@example.com" required>
       <button type="submit">Notify Me</button>
     </div>
+    <!-- Formspree honeypot: bots fill this hidden field; real users never see it -->
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+           style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
     <p class="signup__msg" id="signupMsg" role="status" aria-live="polite"></p>
   </form>
 </main>
