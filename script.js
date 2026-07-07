@@ -15,7 +15,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   } else {
     steam.addEventListener("click", function (e) {
       e.preventDefault();
-      msg.textContent = "Steam page coming soon — check back!";
+      msg.textContent = "Steam page coming soon — join the Discord for updates!!";
     });
   }
 })();
